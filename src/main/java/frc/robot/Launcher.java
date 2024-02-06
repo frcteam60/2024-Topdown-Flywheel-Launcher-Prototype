@@ -5,9 +5,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Launcher {
     // Controls the top roller
-    private CimMotor leftMotor = new CimMotor(13, false);
+    private NeoMotor leftMotor = new NeoMotor(13, false);
     // Controls the bottom roller
-    private CimMotor rightMotor = new CimMotor(14);
+    private NeoMotor rightMotor = new NeoMotor(14);
 
     private final SendableChooser<String> chooser = new SendableChooser<>();
 

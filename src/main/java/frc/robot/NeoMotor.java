@@ -5,24 +5,24 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-public class CimMotor {
+public class NeoMotor {
 
     private CANSparkMax motor;
 
-    public CimMotor(int id, boolean isInverted) {
-        motor = new CANSparkMax(id, MotorType.kBrushed);
+    public NeoMotor(int id, boolean isInverted) {
+        motor = new CANSparkMax(id, MotorType.kBrushless);
         motor.setInverted(isInverted);
     }
 
-    public CimMotor(int id) {
-        motor = new CANSparkMax(id, MotorType.kBrushed);
+    public NeoMotor(int id) {
+        motor = new CANSparkMax(id, MotorType.kBrushless);
         motor.setInverted(false);
     }
 
     public void runAtSpeed(double speed) {
-        if(speed > 1.0) {
+        if (speed > 1.0) {
             speed = 1.0;
-        } else if(speed < -1.0){
+        } else if (speed < -1.0) {
             speed = -1.0;
         }
         motor.set(speed);

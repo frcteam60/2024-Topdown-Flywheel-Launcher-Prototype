@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Intake {
-    private CimMotor motor = new CimMotor(11);
+    private NeoMotor motor = new NeoMotor(11);
 
     private final SendableChooser<String> chooser = new SendableChooser<>();
 
