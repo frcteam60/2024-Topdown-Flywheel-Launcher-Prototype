@@ -4,13 +4,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Intake {
-    private CimMotor motor = new CimMotor(17);
+    private CimMotor motor = new CimMotor(11);
 
     private final SendableChooser<String> chooser = new SendableChooser<>();
 
     private static final String kFullStop = "Full Stop";
     private static final String kFullIntake = "Full Intake";
-    private static final String kReverse = "InReversetake";
+    private static final String kReverse = "Reverse";
 
     public Intake() {
     }
