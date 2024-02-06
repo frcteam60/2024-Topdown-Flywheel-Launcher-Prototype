@@ -32,6 +32,7 @@ public class Robot extends TimedRobot {
   // private XboxController controller = new XboxController(0);
 
   private Launcher launcher = new Launcher();
+  private Intake intake = new Intake();
 
   /**
    * This function is run when the robot is first started up and should be used
@@ -44,6 +45,8 @@ public class Robot extends TimedRobot {
     SmartDashboard.putData("Auto choices", m_chooser);
 
     launcher.addDashboardDisplays();
+    intake.addDashboardDisplays();
+
   }
 
   /**
@@ -99,6 +102,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     launcher.periodicUpdate();
+    intake.periodicUpdate();
   }
 
   /** This function is called once when the robot is disabled. */
