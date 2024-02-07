@@ -4,13 +4,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Intake {
-    private NeoMotor motor = new NeoMotor(11);
+    // TODO: Switchintake to using a redline with a talon srx speed controller
+    private TalonMotor motor = new TalonMotor(11);
 
     private final SendableChooser<String> chooser = new SendableChooser<>();
 
     private static final String kFullStop = "Full Stop";
     private static final String kFullIntake = "Full Intake";
-    private static final String kReverse = "Reverse";
+    private static final String kReverse = "Slow Reject";
 
     public Intake() {
     }
